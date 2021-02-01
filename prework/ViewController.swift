@@ -18,10 +18,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let defaults = UserDefaults.standard
-        defaults.set(15, forKey: "left")
-        defaults.set(18, forKey: "mid")
-        defaults.set(20, forKey: "right")
-        // Do any additional setup after loading the view.
+        if defaults.value(forKey: "left") == nil {
+            defaults.set(15, forKey: "left")
+        }
+        if defaults.value(forKey: "mid") == nil {
+            defaults.set(18, forKey: "mid")
+        }
+        if defaults.value(forKey: "right") == nil {
+            defaults.set(20, forKey: "right")
+        }
     }
 
     @IBAction func calculateTip(_ sender: Any) {
