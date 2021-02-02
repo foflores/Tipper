@@ -27,9 +27,10 @@ class ViewController: UIViewController {
         if defaults.value(forKey: "right") == nil {
             defaults.set(20, forKey: "right")
         }
+        billAmountTextField.becomeFirstResponder()
     }
-
-    @IBAction func calculateTip(_ sender: Any) {
+    
+    func calculateTip() {
         let bill = Double(billAmountTextField.text!) ?? 0.0
         let defaults = UserDefaults.standard
         let left = defaults.integer(forKey: "left")
@@ -41,25 +42,24 @@ class ViewController: UIViewController {
         
         tipAmountLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)
+    }
+    
+    @IBAction func textFieldInput(_ sender: Any) {
+        calculateTip()
+    }
+    
+    @IBAction func segmentedControlInput(_ sender: Any) {
+        calculateTip()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let bill = Double(billAmountTextField.text!) ?? 0.0
         let defaults = UserDefaults.standard
-        let left = defaults.integer(forKey: "left")
-        let mid = defaults.integer(forKey: "mid")
-        let right = defaults.integer(forKey: "right")
-        tipControl.setTitle(String(left) + "%", forSegmentAt: 0)
-        tipControl.setTitle(String(mid) + "%", forSegmentAt: 1)
-        tipControl.setTitle(String(right) + "%", forSegmentAt: 2)
-        let tipPercentages = [left, mid, right]
-        let tip = bill * Double(tipPercentages[tipControl.selectedSegmentIndex]) * 0.01
-        let total = bill + tip
-        
-        tipAmountLabel.text = String(format: "$%.2f", tip)
-        totalLabel.text = String(format: "$%.2f", total)
+        tipControl.setTitle(String(defaults.integer(forKey: "left")) + "%", forSegmentAt: 0)
+        tipControl.setTitle(String(defaults.integer(forKey: "mid")) + "%", forSegmentAt: 1)
+        tipControl.setTitle(String(defaults.integer(forKey: "right")) + "%", forSegmentAt: 2)
+        billAmountTextField.becomeFirstResponder()
+        calculateTip()
     }
-    
 }
 
