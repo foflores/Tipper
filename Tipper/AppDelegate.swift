@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  prework
+//  Tipper
 //
 //  Created by Favian Flores on 1/30/21.
 //

@@ -1,13 +1,13 @@
 //
-//  ViewController.swift
-//  prework
+//  MainViewController.swift
+//  Tipper
 //
 //  Created by Favian Flores on 1/30/21.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
     
     @IBOutlet weak var billAmountTextField: UITextField!

@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  prework
+//  Tipper
 //
 //  Created by Favian Flores on 1/30/21.
 //
@@ -49,4 +49,3 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
 }
-

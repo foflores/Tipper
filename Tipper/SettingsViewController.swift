@@ -1,6 +1,6 @@
 //
 //  SettingsViewController.swift
-//  prework
+//  Tipper
 //
 //  Created by Favian Flores on 2/1/21.
 //
