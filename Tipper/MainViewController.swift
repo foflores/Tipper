@@ -29,7 +29,7 @@ class MainViewController: UIViewController {
 	// View Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
-		NotificationCenter.default.addObserver(self, selector: #selector(billAmountTimer), name: UIApplication.willResignActiveNotification, object: nil)
+		NotificationCenter.default.addObserver(self, selector: #selector(setSaveTimer), name: UIApplication.willResignActiveNotification, object: nil)
 		NotificationCenter.default.addObserver(self, selector: #selector(restoreBillAmount), name: UIApplication.willEnterForegroundNotification, object: nil)
 		restoreBillAmount()
 		setTipControllerDefaults()
@@ -38,8 +38,8 @@ class MainViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+		billAmountTextField.becomeFirstResponder()
         updateTipControllerValues()
-        billAmountTextField.becomeFirstResponder()
         calculateTip()
     }
 	
@@ -76,14 +76,16 @@ class MainViewController: UIViewController {
 		let right = defaults.integer(forKey: "tipControllerRight")
 		let tipPercentages = [left, mid, right]
 		
-		let bill = Double(billAmountTextField.text!) ?? 0.0
-		let tip = bill * Double(tipPercentages[tipController.selectedSegmentIndex]) * 0.01
+		let people = Double(numberOfPeopleTextField.text!) ?? 1.0
+		let bill = (Double(billAmountTextField.text!) ?? 0.0)/people
+		let tip = (bill * Double(tipPercentages[tipController.selectedSegmentIndex]) * 0.01)
 		let total = bill + tip
 		
 		tipAmountLabel.text = String(format: "$%.2f", tip)
 		totalLabel.text = String(format: "$%.2f", total)
 		
 		defaults.set(Double(billAmountTextField.text!), forKey: "billAmount")
+		defaults.set(Int(numberOfPeopleTextField.text!), forKey: "numberOfPeople")
 		defaults.set(Int(tipController.selectedSegmentIndex), forKey: "tipControllerIndex")
 	}
 
@@ -91,11 +93,13 @@ class MainViewController: UIViewController {
 		let date = Date()
 		if (defaults.value(forKey: "deleteBillAmountBy") != nil && date > defaults.value(forKey: "deleteBillAmountBy") as! Date) {
 			defaults.set("", forKey: "billAmount")
+			defaults.set("", forKey: "numberOfPeople")
 		}
 		billAmountTextField.text = defaults.string(forKey: "billAmount")
+		numberOfPeopleTextField.text = defaults.string(forKey: "numberOfPeople")
 	}
 	
-	@objc func billAmountTimer() {
+	@objc func setSaveTimer() {
 		defaults.set(Date(timeInterval: 600, since: Date()), forKey: "deleteBillAmountBy")
 	}
 }

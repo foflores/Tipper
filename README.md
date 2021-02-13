@@ -23,12 +23,13 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 
 - [x] Settings menu to set the default tip percentages
+- [x] Allows you to choose the number of people to divide the bill by
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://i.imgur.com/co24h9u.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://i.imgur.com/SzM9Nqn.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 ## Notes
 
