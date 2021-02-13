@@ -103,14 +103,14 @@
 		B00DD7AA25C5DA68000BC2A0 /* Tipper */ = {
 			isa = PBXGroup;
 			children = (
-				B00DD7B925C5DA6B000BC2A0 /* Info.plist */,
 				B00DD7AB25C5DA68000BC2A0 /* AppDelegate.swift */,
-				B00DD7AF25C5DA68000BC2A0 /* MainViewController.swift */,
 				B00DD7AD25C5DA68000BC2A0 /* SceneDelegate.swift */,
+				B00DD7AF25C5DA68000BC2A0 /* MainViewController.swift */,
 				B08816A225C874AB00AD288F /* SettingsViewController.swift */,
-				B00DD7B425C5DA6B000BC2A0 /* Assets.xcassets */,
-				B00DD7B625C5DA6B000BC2A0 /* LaunchScreen.storyboard */,
 				B00DD7B125C5DA68000BC2A0 /* Main.storyboard */,
+				B00DD7B625C5DA6B000BC2A0 /* LaunchScreen.storyboard */,
+				B00DD7B425C5DA6B000BC2A0 /* Assets.xcassets */,
+				B00DD7B925C5DA6B000BC2A0 /* Info.plist */,
 			);
 			path = Tipper;
 			sourceTree = "<group>";
