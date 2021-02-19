@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zoR-9G-wws">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zoR-9G-wws" userLabel="billAmount">
                                 <rect key="frame" x="30" y="74" width="87" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="IRm-HU-ZtT"/>
@@ -25,7 +25,7 @@
                                 <color key="textColor" name="AccentColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of People" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P1D-gh-ad5">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of People" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P1D-gh-ad5" userLabel="numberOfPeople">
                                 <rect key="frame" x="30" y="124" width="138" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="WeN-gD-tR3"/>
@@ -34,7 +34,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SrY-bZ-JUH" userLabel="Tip">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SrY-bZ-JUH" userLabel="tip">
                                 <rect key="frame" x="30" y="174" width="24" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="Ib8-lE-f9S"/>
@@ -43,8 +43,17 @@
                                 <color key="textColor" name="AccentColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total (Per Person)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvW-c9-Hdc">
-                                <rect key="frame" x="30" y="270" width="136" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Urz-eg-NnZ" userLabel="total">
+                                <rect key="frame" x="30" y="255" width="37" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="yAW-1U-Xl5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip (Per Person)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvW-c9-Hdc" userLabel="tipPerPerson">
+                                <rect key="frame" x="30" y="305" width="123" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="mts-IP-mg8"/>
                                 </constraints>
@@ -52,8 +61,17 @@
                                 <color key="textColor" name="AccentColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$0.00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TeB-d6-Puh" userLabel="Bill Amount Text Field">
-                                <rect key="frame" x="274" y="66" width="110" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total (Per Person)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTl-QB-Vxy" userLabel="totalPerPerson">
+                                <rect key="frame" x="30" y="355" width="136" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="JFf-Ir-kgn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$0.00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TeB-d6-Puh" userLabel="billAmountTextField">
+                                <rect key="frame" x="276" y="66" width="110" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="ZFu-Z3-OtV"/>
                                     <constraint firstAttribute="height" constant="36" id="lpd-Za-PUr"/>
@@ -61,11 +79,11 @@
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
-                                    <action selector="textFieldInput:" destination="BYZ-38-t0r" eventType="editingChanged" id="ORo-qm-2iJ"/>
+                                    <action selector="userInput:" destination="BYZ-38-t0r" eventType="editingChanged" id="IrQ-V8-tYr"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YYI-EY-tud" userLabel="Number of People Text Field">
-                                <rect key="frame" x="274" y="116" width="110" height="36"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YYI-EY-tud" userLabel="numberofPeopleTextField">
+                                <rect key="frame" x="276" y="116" width="110" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="GuM-5E-nK5"/>
                                     <constraint firstAttribute="width" constant="110" id="dke-Oy-nAz"/>
@@ -73,10 +91,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <connections>
-                                    <action selector="textFieldInput:" destination="BYZ-38-t0r" eventType="editingChanged" id="v7b-Zc-ass"/>
+                                    <action selector="userInput:" destination="BYZ-38-t0r" eventType="editingChanged" id="WGg-Xf-vAc"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zw-af-f2y" userLabel="Tip Amount Label">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zw-af-f2y" userLabel="tipLabel">
                                 <rect key="frame" x="274" y="174" width="110" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="E1C-gR-VbS"/>
@@ -86,8 +104,8 @@
                                 <color key="textColor" name="AccentColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tkT-vJ-FDl" userLabel="Total Amount Label">
-                                <rect key="frame" x="274" y="270" width="110" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tkT-vJ-FDl" userLabel="totalLabel">
+                                <rect key="frame" x="274" y="255" width="110" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="0zK-3Z-oQf"/>
                                     <constraint firstAttribute="width" constant="110" id="AYH-GI-bM6"/>
@@ -96,28 +114,8 @@
                                 <color key="textColor" name="AccentColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9RQ-Av-xnC" userLabel="Tip Controller">
-                                <rect key="frame" x="30" y="209" width="354" height="32"/>
-                                <segments>
-                                    <segment title="15%"/>
-                                    <segment title="18%"/>
-                                    <segment title="20%"/>
-                                </segments>
-                                <connections>
-                                    <action selector="segmentedControlInput:" destination="BYZ-38-t0r" eventType="valueChanged" id="wHz-RT-0Wu"/>
-                                </connections>
-                            </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip (Per Person)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTl-QB-Vxy">
-                                <rect key="frame" x="30" y="320" width="123" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="JFf-Ir-kgn"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" name="AccentColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QET-Ey-Pls" userLabel="Total Amount Label">
-                                <rect key="frame" x="274" y="320" width="110" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QET-Ey-Pls" userLabel="tipPerPersonLabel">
+                                <rect key="frame" x="274" y="305" width="110" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="FJc-D9-ocg"/>
                                     <constraint firstAttribute="height" constant="20" id="hhA-LI-pFy"/>
@@ -126,6 +124,27 @@
                                 <color key="textColor" name="AccentColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNn-E2-7lD" userLabel="totalPerPersonLabel">
+                                <rect key="frame" x="274" y="355" width="110" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="nf3-i2-fji"/>
+                                    <constraint firstAttribute="height" constant="20" id="ytd-XJ-El4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9RQ-Av-xnC" userLabel="tipChoiceSegCtrl">
+                                <rect key="frame" x="30" y="209" width="356" height="32"/>
+                                <segments>
+                                    <segment title="15%"/>
+                                    <segment title="18%"/>
+                                    <segment title="20%"/>
+                                </segments>
+                                <connections>
+                                    <action selector="userInput:" destination="BYZ-38-t0r" eventType="valueChanged" id="8PQ-BV-Kul"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="Main"/>
@@ -133,23 +152,27 @@
                         <constraints>
                             <constraint firstItem="oTl-QB-Vxy" firstAttribute="top" secondItem="yvW-c9-Hdc" secondAttribute="bottom" constant="30" id="0Xw-Ul-QCR"/>
                             <constraint firstItem="yvW-c9-Hdc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="4eF-lm-SFo"/>
+                            <constraint firstItem="yvW-c9-Hdc" firstAttribute="top" secondItem="Urz-eg-NnZ" secondAttribute="bottom" constant="30" id="5dC-Oi-Zse"/>
                             <constraint firstItem="SrY-bZ-JUH" firstAttribute="top" secondItem="P1D-gh-ad5" secondAttribute="bottom" constant="30" id="5p4-hh-MFj"/>
                             <constraint firstItem="zoR-9G-wws" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="65e-4q-hqU"/>
+                            <constraint firstItem="Urz-eg-NnZ" firstAttribute="top" secondItem="9RQ-Av-xnC" secondAttribute="bottom" constant="15" id="7CD-sW-ghZ"/>
                             <constraint firstItem="9zw-af-f2y" firstAttribute="top" secondItem="YYI-EY-tud" secondAttribute="bottom" constant="22" id="Dba-RM-BaJ"/>
-                            <constraint firstItem="yvW-c9-Hdc" firstAttribute="top" secondItem="9RQ-Av-xnC" secondAttribute="bottom" constant="30" id="Htg-L9-axg"/>
                             <constraint firstItem="9RQ-Av-xnC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="JyG-Nt-OuI"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9RQ-Av-xnC" secondAttribute="trailing" constant="30" id="KYI-3I-ttA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9RQ-Av-xnC" secondAttribute="trailing" constant="28" id="KYI-3I-ttA"/>
+                            <constraint firstItem="TNn-E2-7lD" firstAttribute="top" secondItem="QET-Ey-Pls" secondAttribute="bottom" constant="30" id="LYb-sc-xEO"/>
                             <constraint firstItem="TeB-d6-Puh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="Nwz-PT-3H2"/>
                             <constraint firstItem="P1D-gh-ad5" firstAttribute="top" secondItem="zoR-9G-wws" secondAttribute="bottom" constant="30" id="OMR-BE-1TD"/>
-                            <constraint firstItem="tkT-vJ-FDl" firstAttribute="top" secondItem="9RQ-Av-xnC" secondAttribute="bottom" constant="30" id="P9n-Px-QDB"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TeB-d6-Puh" secondAttribute="trailing" constant="30" id="Qus-na-If0"/>
+                            <constraint firstItem="tkT-vJ-FDl" firstAttribute="top" secondItem="9RQ-Av-xnC" secondAttribute="bottom" constant="15" id="P9n-Px-QDB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TeB-d6-Puh" secondAttribute="trailing" constant="28" id="Qus-na-If0"/>
                             <constraint firstItem="SrY-bZ-JUH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="QvT-ne-xIJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YYI-EY-tud" secondAttribute="trailing" constant="30" id="VHP-ZX-DPO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YYI-EY-tud" secondAttribute="trailing" constant="28" id="VHP-ZX-DPO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tkT-vJ-FDl" secondAttribute="trailing" constant="30" id="ZWP-UK-5hJ"/>
                             <constraint firstItem="9RQ-Av-xnC" firstAttribute="top" secondItem="9zw-af-f2y" secondAttribute="bottom" constant="15" id="Zus-JK-hzh"/>
                             <constraint firstItem="YYI-EY-tud" firstAttribute="top" secondItem="TeB-d6-Puh" secondAttribute="bottom" constant="14" id="eTj-fj-5tu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9zw-af-f2y" secondAttribute="trailing" constant="30" id="fmd-rn-fQZ"/>
+                            <constraint firstItem="Urz-eg-NnZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="gf7-b6-sBN"/>
                             <constraint firstItem="QET-Ey-Pls" firstAttribute="top" secondItem="tkT-vJ-FDl" secondAttribute="bottom" constant="30" id="lzp-rQ-HkA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TNn-E2-7lD" secondAttribute="trailing" constant="30" id="n1a-ax-6hw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QET-Ey-Pls" secondAttribute="trailing" constant="30" id="u8J-ry-C3S"/>
                             <constraint firstItem="zoR-9G-wws" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="w4n-ef-9yG"/>
                             <constraint firstItem="P1D-gh-ad5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="xKg-rK-qKy"/>
@@ -168,9 +191,11 @@
                     <connections>
                         <outlet property="billAmountTextField" destination="TeB-d6-Puh" id="uvT-OY-SMX"/>
                         <outlet property="numberOfPeopleTextField" destination="YYI-EY-tud" id="hFG-xZ-Tuy"/>
-                        <outlet property="tipAmountLabel" destination="9zw-af-f2y" id="hD4-de-gNf"/>
-                        <outlet property="tipController" destination="9RQ-Av-xnC" id="djp-sB-BFd"/>
+                        <outlet property="tipChoiceSegCtrl" destination="9RQ-Av-xnC" id="0ln-wW-T76"/>
+                        <outlet property="tipLabel" destination="9zw-af-f2y" id="qEq-ze-D7R"/>
+                        <outlet property="tipPerPersonLabel" destination="QET-Ey-Pls" id="qo1-qC-mgD"/>
                         <outlet property="totalLabel" destination="tkT-vJ-FDl" id="WJA-8i-ZRW"/>
+                        <outlet property="totalPerPersonLabel" destination="TNn-E2-7lD" id="tkf-bD-TGK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -185,7 +210,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3RL-bH-8nU" userLabel="TipControllerLeft">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3RL-bH-8nU" userLabel="defaultTip0TextField">
                                 <rect key="frame" x="27" y="154" width="97" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -194,7 +219,7 @@
                                     <action selector="updateSampleTipController:" destination="EMG-kZ-kF6" eventType="editingChanged" id="yvf-CV-zRh"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bZu-0F-m5w" userLabel="TipControllerMid">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bZu-0F-m5w" userLabel="defaultTip1TextField">
                                 <rect key="frame" x="152" y="154" width="97" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -203,7 +228,7 @@
                                     <action selector="updateSampleTipController:" destination="EMG-kZ-kF6" eventType="editingChanged" id="e2F-9V-utb"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GLG-34-Kc6" userLabel="TipControllerRight">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GLG-34-Kc6" userLabel="defaultTip2TextField">
                                 <rect key="frame" x="276" y="154" width="97" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -212,14 +237,14 @@
                                     <action selector="updateSampleTipController:" destination="EMG-kZ-kF6" eventType="editingChanged" id="UNY-Ke-SzL"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose your tip percentages and the default choice to be highlighted" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTn-hO-oMP" userLabel="Tip Settings Label">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose your tip percentages and the default choice to be highlighted" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTn-hO-oMP" userLabel="defaultTipDescription">
                                 <rect key="frame" x="27" y="96" width="367" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="keN-A1-cr7" userLabel="sampleTipController">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="keN-A1-cr7" userLabel="defaultTipSegCtrl">
                                 <rect key="frame" x="27" y="203" width="346" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>

@@ -79,6 +79,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B001D6F825E01C7D00F7BCCC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B00DD7AF25C5DA68000BC2A0 /* MainViewController.swift */,
+				B08816A225C874AB00AD288F /* SettingsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B001D6F925E01CB600F7BCCC /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				B00DD7AB25C5DA68000BC2A0 /* AppDelegate.swift */,
+				B00DD7AD25C5DA68000BC2A0 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
 		B00DD79F25C5DA68000BC2A0 = {
 			isa = PBXGroup;
 			children = (
@@ -103,10 +121,8 @@
 		B00DD7AA25C5DA68000BC2A0 /* Tipper */ = {
 			isa = PBXGroup;
 			children = (
-				B00DD7AB25C5DA68000BC2A0 /* AppDelegate.swift */,
-				B00DD7AD25C5DA68000BC2A0 /* SceneDelegate.swift */,
-				B00DD7AF25C5DA68000BC2A0 /* MainViewController.swift */,
-				B08816A225C874AB00AD288F /* SettingsViewController.swift */,
+				B001D6F925E01CB600F7BCCC /* Delegates */,
+				B001D6F825E01C7D00F7BCCC /* ViewControllers */,
 				B00DD7B125C5DA68000BC2A0 /* Main.storyboard */,
 				B00DD7B625C5DA6B000BC2A0 /* LaunchScreen.storyboard */,
 				B00DD7B425C5DA6B000BC2A0 /* Assets.xcassets */,
@@ -140,6 +156,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B00DD7D225C5DA6B000BC2A0 /* Build configuration list for PBXNativeTarget "Tipper" */;
 			buildPhases = (
+				B06CE05125DF668E00350CF9 /* ShellScript */,
 				B00DD7A425C5DA68000BC2A0 /* Sources */,
 				B00DD7A525C5DA68000BC2A0 /* Frameworks */,
 				B00DD7A625C5DA68000BC2A0 /* Resources */,
@@ -257,6 +274,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B06CE05125DF668E00350CF9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ -f ~/.config/swift/swiftlintconfig.yml ]; then\n  if which swiftlint >/dev/null; then\n    swiftlint --no-cache --config ~/.config/swift/swiftlintconfig.yml\n  fi\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B00DD7A425C5DA68000BC2A0 /* Sources */ = {
@@ -450,7 +487,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = flores.tipper;
+				PRODUCT_BUNDLE_IDENTIFIER = favianflores.tipper;
 				PRODUCT_NAME = Tipper;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -470,7 +507,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = flores.tipper;
+				PRODUCT_BUNDLE_IDENTIFIER = favianflores.tipper;
 				PRODUCT_NAME = Tipper;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
