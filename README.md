@@ -1,10 +1,6 @@
 # Tipper
 
-Tipper is a tip calculator application for iOS.
-
-Submitted by: Favian Flores
-
-Time spent: 3 hours spent in total
+Tip calculator app for iOS.
 
 ## User Stories
 
@@ -25,28 +21,6 @@ The following **additional** features are implemented:
 - [x] Settings menu to set the default tip percentages
 - [x] Allows you to choose the number of people to divide the bill by
 
-## Video Walkthrough
-
-Here's a walkthrough of implemented user stories:
-
-<img src='Gifs/Tipper2.gif' title='Video Walkthrough' width='250' alt='Video Walkthrough' />
-
 ## Notes
 
 A challenge I faced when setting up the app was preserving the tip settings across different uses. There were several small things to think about when implementing it. Such as setting defaults for the first time versus loading the previously saved values afterwards or opening the settings menu and leaving the inputs blank, or updating the segmented control to reflect the changed values. 
-
-## License
-
-	Copyright 2021 Favian Flores
-
-	Licensed under the Apache License, Version 2.0 (the "License");
-	you may not use this file except in compliance with the License.
-	You may obtain a copy of the License at
-
-		http://www.apache.org/licenses/LICENSE-2.0
-
-	Unless required by applicable law or agreed to in writing, software
-	distributed under the License is distributed on an "AS IS" BASIS,
-	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-	See the License for the specific language governing permissions and
-	limitations under the License.
