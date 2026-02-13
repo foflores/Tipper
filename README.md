@@ -2,6 +2,8 @@
 
 Tip calculator app for iOS.
 
+Created For: CodePath - iOS Development
+
 ## User Stories
 
 The following **required** functionality is complete:
